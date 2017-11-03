@@ -434,6 +434,7 @@ open class SocketIOClient : NSObject, SocketIOClientSpec, SocketEngineClient, So
     ///
     /// - parameter reason: The reason the engine opened.
     open func engineDidOpen(reason: String) {
+        joinNamespace(nsp)
         DefaultSocketLogger.Logger.log(reason, type: SocketIOClient.logType)
     }
 
